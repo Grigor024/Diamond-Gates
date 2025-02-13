@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customGreen: '#245852',
+                        customBlue: "#11112e",
+                    },
+                    boxShadow: {
+                        'custom': '0 4px 6px rgba(0, 0, 0, 0.8)', // Пример своей тени
+                    },
+
+                },
+            },
+        };
+    </script>
+    <style>
+        .slider {
+            transition: transform 0.5s ease;
+        }
+    </style>
+    <title>DiamondGates</title>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gradient-to-b from-customBlue to-white bg-no-repeat bg-[100%_50%]"
+    style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+
+    <header id="home" class="flex items-center justify-between py-6 px-12 lg:px-10">
+        <!-- Logo, name -->
+        <div class="flex items-center lg:w-[40%]">
+            <img src="./Logo/logo.gif" alt="Logo" class="w-[60px] h-[60px] md:w-[70px] md:h-[70px] rounded-xl">
+            <h1 class="text-white px-2 py-3 text-[20px] sm:text-[30px] md:text-[40px] lg:text-[25px] xl:text-[40px]">
+                Diamond Gates
+            </h1>
+        </div>
+
+        <!-- Links -->
+        <div class="hidden lg:flex items-center space-x-6">
+            <nav class="flex space-x-3 text-[16px] text-white xl:text-[20px]">
+                <a href="#home">Սկիզբ</a>
+                <a href="#portfolio">Պորտֆոլիո</a>
+                <a href="#service">Ծառայություններ</a>
+                <a href="#about">Մեր մասին</a>
+                <a href="#contact">Կապ</a>
+            </nav>
+            <!-- Phone -->
+            <div class="text-white text-[13px] xl:text-[20px]">
+                <h1>
+                    <i class="fa-solid fa-phone-volume"></i> +374 95 095 956
+                </h1>
+            </div>
+        </div>
+
+        <!-- Burger -->
+        <div class="lg:hidden">
+            <button type="button" id="menu-toggle" class="text-3xl text-white">☰</button>
+        </div>
+    </header>
+
+
+
+    <nav id="mobile-menu"
+        class="w-2/2 h-[20rem] absolute top-[6rem] z-20 right-0 flex flex-col bg-gray-300 hidden space-y-4 py-20 px-4">
+        <a href="#home">Սկիզբ</a>
+        <a href="#portfolio">Պորտֆոլիո</a>
+        <a href="#service">Ծառայություններ</a>
+        <a href="#about">Մեր մասին</a>
+        <a href="#contact">Կապ</a>
+    </nav>
+
+    <!-- SildeShow -->
+
+    <div class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[800px] flex justify-center items-center space-x-4">
+
+
+        <div class="h-auto flex justify-center items-center">
+            <button id="prev" class="text-white rounded-xl hidden sm:block">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+                    <path fill-rule="evenodd"
+                        d="M15.707 5.293a1 1 0 010 1.414L10.414 12l5.293 5.293a1 1 0 01-1.414 1.414l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+
+
+        <div
+            class="flex justify-center items-center w-[90%] max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[700px] xl:max-w-[720px] overflow-hidden">
+            <div class="flex slider" id="slider">
+                <div class="flex-shrink-0 w-full slide">
+                    <img src="./img/20.jpg" alt="" class="w-full h-auto object-cover">
+                </div>
+                <div class="flex-shrink-0 w-full slide">
+                    <img src="./img/21.jpg" alt="" class="w-full h-auto object-cover">
+                </div>
+                <div class="flex-shrink-0 w-full slide">
+                    <img src="./img/22.jpg" alt="" class="w-full h-auto object-cover">
+                </div>
+                <div class="flex-shrink-0 w-full slide">
+                    <img src="./img/23.jpg" alt="" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="h-auto flex justify-center items-center">
+            <button id="next" class="text-white rounded-xl hidden sm:block">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+                    <path fill-rule="evenodd"
+                        d="M8.293 5.293a1 1 0 000 1.414L13.586 12 8.293 17.293a1 1 0 101.414 1.414l6-6a1 1 0 000-1.414l-6-6a1 1 0 00-1.414 0z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+    <div>
+        <div id="portfolio" class="flex items-center justify-center gap-4 py-10">
+            <span class="w-[10%] h-px bg-white"></span>
+            <span class="text-3xl lg:text-3xl font-medium text-white">Պորտֆոլիո</span>
+            <span class="w-[10%] h-px bg-white"></span>
+        </div>
+
+        <div class="w-full min-h-[600px] flex flex-col items-center lg:min-h-[900px]">
+
+
+
+            <h1 class="text-2xl py-10 text-white">Նկարներ</h1>
+            <div class="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] flex flex-wrap justify-center gap-4 p-4 rounded-lg">
+                <img src="./img/w_1.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 1">
+                <img src="./img/w_2.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 2">
+                <img src="./img/w_3.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 3">
+                <img src="./img/w_4.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 4">
+                <img src="./img/w_5.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 5">
+                <img src="./img/w_6.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 6">
+                <img src="./img/w_7.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 7">
+                <img src="./img/w_8.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 8">
+                <img src="./img/w_9.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 9">
+                <img src="./img/w_10.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 10">
+                <img src="./img/w_11.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 11">
+                <img src="./img/w_12.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 12">
+                <img src="./img/w_13.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 13">
+                <img src="./img/w_14.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 14">
+                <img src="./img/w_15.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 15">
+                <img src="./img/w_16.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 16">
+                <img src="./img/w_17.jpg" class="gallery-img w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] shadow-custom"
+                    alt="Slide 17">
+            </div>
+
+
+            <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden">
+                <div class="relative">
+                    <button id="close-modal" class="absolute -top-6 -right-6 text-white text-3xl">✖</button>
+                    <img id="modal-img" class="max-w-[80vw] max-h-[80vh]" src="" alt="Full Image">
+                </div>
+            </div>
+
+
+            <h1 class="text-2xl py-10 text-white">Տեսանյութ</h1>
+            <div
+                class="w-[90%] py-1 sm:w-[80%] md:w-[70%] lg:w-[60%] flex flex-wrap justify-center gap-4 p-4 rounded-lg">
+                <video src="./movies/06.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/02.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/05.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/04.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/03.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/01.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/07.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/08.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/09.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/10.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/11.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/12.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/13.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/14.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/15.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+                <video src="./movies/16.mp4" class="video-thumbnail w-[40%] sm:w-[30%] md:w-[25%] lg:w-[18%]"
+                    controls></video>
+
+            </div>
+
+            <div class="w-full text-right px-10">
+                <a href="#home" class="fa fa-arrow-up fa-2x " aria-hidden="true "></a>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div>
+            <div id="service" class="flex items-center justify-center gap-4 py-10">
+                <span class="w-[10%] h-px bg-black"></span>
+                <span class="text-3xl lg:text-3xl text-black">Ծառայություններ</span>
+                <span class="w-[10%] h-px bg-black"></span>
+            </div>
+
+
+
+
+            <div
+                class="flex flex-col justify-center items-center sm:flex-col sm:px-[2em] md:px-4 lg:flex-row lg:px-[5em]">
+
+                <p class="px-[30px] py-[20px] text-2xl">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa
+                    similique?Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
+                </p>
+                <img src="./img/22.jpg" alt="" class="w-[20em]">
+            </div>
+            <div
+                class="flex flex-col justify-center items-center sm:flex-col py-8 sm:px-[2em] md:px-4 lg:flex-row lg:px-[5em]">
+                <img src="./img/23.jpg" alt="" class="w-[20em] hidden lg:block">
+                <p class="px-[30px] py-[20px] text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa
+                    similique?Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
+                </p>
+                <img src="./img/23.jpg" alt="" class="w-[20em] lg:hidden">
+            </div>
+            <div
+                class=" flex flex-col justify-center items-center sm:flex-col py-8 sm:px-[2em] md:px-4 lg:flex-row lg:px-[5em]">
+                <p class="px-[30px] py-[20px] text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa
+                    similique?Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
+                </p>
+                <img src="./img/20.jpg" alt="" class="w-[20em]">
+            </div>
+
+
+            <div class="w-full text-right px-10">
+                <a href="#home" class="fa fa-arrow-up fa-2x " aria-hidden="true "></a>
+            </div>
+
+        </div>
+
+
+
+        <div>
+            <div id="about" class="flex items-center justify-center gap-4 py-10">
+                <span class="w-[10%] h-px bg-black"></span>
+                <span class="text-3xl lg:text-3xl font-medium text-black">Մեր մասին</span>
+                <span class="w-[10%] h-px bg-black"></span>
+            </div>
+
+            <div class="flex flex-col justify-center items-center sm:flex-col py-8 sm:px-[2em] md:px-4 lg:flex-row lg:px-[5em]">
+                <img src="./img/23.jpg" alt="" class="w-[20em] hidden lg:block">
+                <p class="px-[30px] py-[20px] text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa
+                    similique?Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
+                    in facilis minima debitis architecto voluptatem excepturi laborum
+                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
+                </p>
+                <img src="./img/23.jpg" alt="" class="w-[20em] lg:hidden">
+            </div>
+            <div class="w-full text-right px-10">
+                <a href="#home" class="fa fa-arrow-up fa-2x " aria-hidden="true "></a>
+            </div>
+
+
+            <div class="w-full h-[15em]">
+                <div id="contact" class="flex items-center justify-center gap-4 py-10">
+                    <span class="w-[10%] h-px bg-black"></span>
+                    <span class="text-3xl lg:text-3xl font-medium text-black">Փնտրեք մեզ նաև</span>
+                    <span class="w-[10%] h-px bg-black"></span>
+                </div>
+                <h1 class="text-center text-[20px]">
+                    <i class="fa-solid fa-phone-volume"></i> +374 95 095 956
+                </h1>
+                <div class="py-4 flex justify-center space-x-6">
+
+                    <img src="./icons/instagram.png" class="w-9" alt="">
+                    <img src="./icons/tiktok.png" class="w-9" alt="">
+                    <img src="./icons/whatsapp.png" class="w-9" alt="">
+                    <img src="./icons/facebook.png" class="w-9" alt="">
+                </div>
+
+            </div>
+
+
+            <footer class="text-white text-center bg-black">
+                Copyright 2025
+            </footer>
+
+
+
+
+
+            <script src="./js/script.js"></script>
+
+</body>
+
+</html>
