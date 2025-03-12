@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-     <script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         customGreen: '#245852',
                         customBlue: "#11112e",
+                        customGray: "#bdbdbd"
                     },
                     boxShadow: {
                         'custom': '0 4px 6px rgba(0, 0, 0, 0.8)', // Пример своей тени
@@ -36,19 +39,21 @@
         <!-- Logo, name -->
         <div class="flex items-center lg:w-[40%]">
             <img src="./Logo/logo.gif" alt="Logo" class="w-[60px] h-[60px] md:w-[70px] md:h-[70px] rounded-xl">
-            <h1 class="text-white px-2 py-3 text-[20px] sm:text-[30px] md:text-[40px] lg:text-[25px] xl:text-[40px]">
+            <h1
+                class="logo-shadow text-white px-2 py-3 text-[20px] sm:text-[30px] md:text-[40px] lg:text-[40px] xl:text-[40px]">
                 Diamond Gates
             </h1>
+
         </div>
 
         <!-- Links -->
         <div class="hidden lg:flex items-center space-x-6">
             <nav class="flex space-x-3 text-[16px] text-white xl:text-[20px]">
-                <a href="#home">Սկիզբ</a>
-                <a href="#portfolio">Պորտֆոլիո</a>
-                <a href="#service">Ծառայություններ</a>
-                <a href="#about">Մեր մասին</a>
-                <a href="#contact">Կապ</a>
+                <a href="#home" class="hover:text-customGray">Սկիզբ</a>
+                <a href="#portfolio" class="hover:text-customGray">Պորտֆոլիո</a>
+                <a href="#service" class="hover:text-customGray">Ծառայություններ</a>
+                <a href="#about" class="hover:text-customGray">Մեր մասին</a>
+                <a href="#contact" class="hover:text-customGray">Կապ</a>
             </nav>
             <!-- Phone -->
             <div class="text-white text-[13px] xl:text-[20px]">
@@ -68,11 +73,11 @@
 
     <nav id="mobile-menu"
         class="w-2/2 h-[20rem] absolute top-[6rem] z-20 right-0 flex flex-col bg-gray-300 hidden space-y-4 py-20 px-4">
-        <a href="#home">Սկիզբ</a>
-        <a href="#portfolio">Պորտֆոլիո</a>
-        <a href="#service">Ծառայություններ</a>
-        <a href="#about">Մեր մասին</a>
-        <a href="#contact">Կապ</a>
+        <a href="#home" class="hover:text-white">Սկիզբ</a>
+        <a href="#portfolio" class="hover:text-white">Պորտֆոլիո</a>
+        <a href="#service" class="hover:text-white">Ծառայություններ</a>
+        <a href="#about" class="hover:text-white">Մեր մասին</a>
+        <a href="#contact" class="hover:text-white">Կապ</a>
     </nav>
 
     <!-- SildeShow -->
@@ -221,144 +226,184 @@
             </div>
 
             <div class="w-full text-right px-10">
-                <a href="#home" class="fa fa-arrow-up fa-2x " aria-hidden="true "></a>
+                <a href="#home" class="fa fa-arrow-up fa-2x lg:hidden" aria-hidden="true "></a>
             </div>
 
 
         </div>
 
 
-
-
-
-        <div>
-            <div id="service" class="flex items-center justify-center gap-4 py-10">
-                <span class="w-[10%] h-px bg-black"></span>
-                <span class="text-3xl lg:text-3xl text-black">Ծառայություններ</span>
-                <span class="w-[10%] h-px bg-black"></span>
-            </div>
-
-
-
-
-            <div
-                class="flex flex-col justify-center items-center sm:flex-col sm:px-[2em] md:px-4 lg:flex-row lg:px-[5em]">
-
-                <p class="px-[30px] py-[20px] text-2xl">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                    aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa
-                    similique?Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
-                </p>
-                <img src="./img/22.jpg" alt="" class="w-[20em]">
-            </div>
-            <div
-                class="flex flex-col justify-center items-center sm:flex-col py-8 sm:px-[2em] md:px-4 lg:flex-row lg:px-[5em]">
-                <img src="./img/23.jpg" alt="" class="w-[20em] hidden lg:block">
-                <p class="px-[30px] py-[20px] text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                    aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa
-                    similique?Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
-                </p>
-                <img src="./img/23.jpg" alt="" class="w-[20em] lg:hidden">
-            </div>
-            <div
-                class=" flex flex-col justify-center items-center sm:flex-col py-8 sm:px-[2em] md:px-4 lg:flex-row lg:px-[5em]">
-                <p class="px-[30px] py-[20px] text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                    aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa
-                    similique?Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
-                </p>
-                <img src="./img/20.jpg" alt="" class="w-[20em]">
-            </div>
-
-
-            <div class="w-full text-right px-10">
-                <a href="#home" class="fa fa-arrow-up fa-2x " aria-hidden="true "></a>
-            </div>
-
+        <div id="service" class="flex items-center justify-center gap-4 py-[5em]">
+            <span class="w-[10%] h-px bg-black"></span>
+            <h2 class="text-3xl lg:text-3xl text-black font-bold">Ծառայություններ</h2>
+            <span class="w-[10%] h-px bg-black"></span>
         </div>
 
 
+        <div class="w-full flex flex-col justify-between items-center py-6 space-y-6">
+
+
+
+            <div class="w-[80%] flex justify-center items-center">
+                <img src="./icons/blacksmith_3.jpg" alt="blacksmith" class="w-[50%] lg:w-[20%] rounded-2xl shadow-2xl">
+            </div>
+            <div class="w-[80%]">
+                <div class="flex flex-col flex-wrap justify-center items-center space-y-4">
+
+                    <div class="text-[20px] flex flex-col space-y-3">
+                        <h1 class="text-[30px] font-bold text-center">Diamond Gates</h1>
+                        <p>Առաջարկում է ամբողջական ծառայությունների փաթեթ՝ դարպասների ավտոմատացման, էլեկտրասարքերի և
+                            կահույքի արտադրության մեջ.</p>
+                    </div>
+
+                    <section class="text-[20px] flex flex-col space-y-4">
+                        <h2 class="font-bold text-2xl"><i class="fa-solid fa-check text-white text-3xl"></i> Ավտոմատ
+                            դարպասներ</h2>
+                        <p>Մենք ապահովում ենք հեռակառավարման հարմարավետությունը, ինչը թույլ է տալիս ձեզ բացել և փակել
+                            դարպասները՝ առանց մեքենայից դուրս գալու, հատկապես անբարենպաստ եղանակային պայմաններում։</p>
+
+                        <h2 class="font-bold text-2xl"><i class="fa-solid fa-check text-white text-3xl"></i> Դարպասների
+                            ձևավորում</h2>
+                        <p>Մենք առաջարկում ենք տարբեր ձևավորումներ, հարմարեցված ձեր տանը կամ բիզնեսին, որպեսզի
+                            համապատասխանեն ցանկացած էսթետիկ նախասիրությունների։</p>
+
+                        <h2 class="font-bold text-2xl"><i class="fa-solid fa-check text-white text-3xl"></i>
+                            Անվտանգության համակարգեր</h2>
+                        <p>Մեր բարձրորակ անվտանգային համակարգերը ապահովում են ձեր ունեցվածքի հուսալի պաշտպանությունը,
+                            կանխարգելելով անօրինական մուտքը։</p>
+
+                        <h2 class="font-bold text-2xl"><i class="fa-solid fa-check text-white text-3xl"></i>
+                            Էլեկտրասարքերի արտադրություն</h2>
+                        <p>Մենք զբաղվում ենք բարձրորակ էլեկտրասարքերի արտադրությամբ, որոնք համապատասխանում են
+                            ժամանակակից ստանդարտներին և պահանջներին։</p>
+
+                        <h2 class="font-bold text-2xl"><i class="fa-solid fa-check text-white text-3xl"></i> Կահույքի
+                            արտադրություն</h2>
+                        <p>Մենք արտադրում ենք տարբեր տեսակի կահույք՝ երկհարկանի մահճակալներ, սեղաններ, աթոռներ, դարակներ
+                            և պահարաններ, ապահովելով բարձր որակ և երկարակեցություն։</p>
+
+                        <h2 class="font-bold text-2xl"><i class="fa-solid fa-check text-white text-3xl"></i> Արագ և
+                            բարձրորակ տեղադրում</h2>
+                        <p>Մեր պրոֆեսիոնալ թիմը ապահովում է արագ և բարձրորակ աշխատանքների կատարում՝ նվազեցնելով
+                            անհանգստությունը հաճախորդների համար և ապահովելով երկարաժամկետ հուսալիություն։</p>
+
+                        <h2 class="font-bold text-2xl"><i class="fa-solid fa-check text-white text-3xl"></i> Երաշխիքային
+                            սպասարկում</h2>
+                        <p>Մենք տրամադրում ենք մեկ տարվա երաշխիքային սպասարկում, ինչը ապահովում է հավելյալ հանգստություն
+                            և վստահություն մեր արտադրանքի և ծառայությունների որակի նկատմամբ։</p>
+
+                        <h2 class="font-bold text-2xl"><i class="fa-solid fa-check text-white text-3xl"></i>
+                            Խորհրդատվություններ և մասնագետի անվճար այց</h2>
+                        <p>Մենք առաջարկում ենք անվճար խորհրդատվություններ և մասնագետի այցեր՝ որոշելու լավագույն
+                            լուծումները ձեր կարիքների համար և տրամադրելու փորձագիտական խորհուրդներ։</p>
+
+                        <h2 class="font-bold text-2xl px-4">Diamond Gates</h2>
+                        <p> նաև հանդիսանում է մի շարք բրենդների ավտոմատացման համակարգերի պաշտոնական ներկայացուցիչ
+                            Հայաստանում, ինչը թույլ է տալիս մեզ առաջարկել միայն ամենաբարձրորակ և փորձարկված լուծումներ։
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="flex items-center justify-center gap-4 py-10">
+            <span class="w-[10%] h-px bg-black"></span>
+            <h2 class="text-3xl lg:text-3xl font-medium text-black font-bold">Մեր մասին</h2>
+            <span class="w-[10%] h-px bg-black"></span>
+        </div>
+
+        <div class="w-full flex flex-col justify-between items-center py-6 space-y-6 ">
+            <div>
+                <img src="./icons/blacksmith_5.jpg" alt="blacksmith" class="w-[20em] rounded-2xl shadow-2xl">
+            </div>
+            <div class="w-[80%] flex justify-center items-center">
+                <section class="text-[20px] flex flex-col space-y-4 text-center">
+
+
+                    <h2 class="font-bold text-2xl ">Diamond Gates</h2>
+                    <p class="text-[20px] leading-relaxed">
+                        Առաջատար ընկերություն է Հայաստանում, որը մասնագիտացված է
+                        <strong>դարպասների տեղադրման և ավտոմատացման</strong>, <strong>էլեկտրասարքերի</strong>
+                        և <strong>տարբեր տեսակի կահույքի արտադրության</strong> մեջ։
+                    </p>
+                    <p class="text-[20px] leading-relaxed">
+                        Մեր առաքելությունն է ստեղծել թվային լուծումներ, որոնք օգնում են բիզնեսներին աճել և զարգանալ։
+                        Մենք ապահովում ենք <strong>հուսալիություն</strong>, <strong>հարմարավետություն</strong>
+                        և <strong>անվտանգություն</strong> առաջադեմ տեխնոլոգիաների և բարձրորակ նյութերի միջոցով։
+                    </p>
+                    <p class="text-[20px] leading-relaxed">
+                        Աշխատելով աշխարհի առաջատար բրենդների հետ՝ մենք երաշխավորում ենք <strong>բարձրակարգ
+                            սպասարկում</strong>
+                        և հաճախորդների պահանջների բավարարում։ Մեր փորձառու մասնագետների թիմը ձգտում է կատարելագործված
+                        իրականացնել յուրաքանչյուր նախագիծ, առաջարկելով <strong>անհատական մոտեցում</strong>
+                        և ուշադիր վերաբերմունք յուրաքանչյուր հաճախորդի հանդեպ։
+                    </p>
+                    <p class="text-[20px] leading-relaxed">
+                        Մենք հպարտ ենք մեր հեղինակությամբ՝ ապահովելով <strong>նորարարական</strong> և <strong>հուսալի
+                            լուծումներ</strong>
+                        <strong>դարպասների ավտոմատացման</strong>, <strong>էլեկտրասարքերի</strong> և <strong>կահույքի
+                            արտադրության</strong> համար։
+                    </p>
+                    <p class="text-[20px] leading-relaxed">
+                        Մեր հաճախորդները ստանում են ոչ միայն <strong>բարձր որակ</strong> ունեցող արտադրանք, այլ նաև
+                        <strong>անվտանգ</strong>
+                        և <strong>հարմարավետ օգտագործման վստահություն</strong>։
+                    </p>
+
+
+                </section>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="w-full text-right px-10">
+        <a href="#home" class="fa fa-arrow-up fa-2x lg:hidden" aria-hidden="true "></a>
+    </div>
+
+    <div id="contact" class="flex items-center justify-center gap-4 py-[5em]">
+        <span class="w-[10%] h-px bg-black"></span>
+        <h2 class="text-2xl lg:text-3xl font-medium text-black font-bold">Փնտրեք մեզ նաև</h2>
+        <span class="w-[10%] h-px bg-black"></span>
+    </div>
+
+    <div class="w-full h-[600px] flex flex-wrap justify-center items-center bg-blue-900 gap-4">
+        <div class="w-full sm:w-[70%] lg:w-[40%]  p-4 flex flex-col justify-center items-center space-y-6">
+            <p class="text-xl font-bold text-white">Contact</p>
+            <h1 class="text-center text-[20px] text-white">
+                <i class="fa-solid fa-phone-volume"></i> +374 95 095 956
+            </h1>
+            <div class="flex space-x-2">
+                <a href="https://wa.me/37495095956" target="_blank"><img src="./icons/whatsapp.png" class="w-9"
+                        alt=""></a>
+                <a href=""></a><img src="./icons/instagram.png" class="w-9" alt="">
+                <a href=""></a><img src="./icons/tiktok.png" class="w-9" alt="">
+                <a href=""></a><img src="./icons/facebook.png" class="w-9" alt="">
+            </div>
+        </div>
 
         <div>
-            <div id="about" class="flex items-center justify-center gap-4 py-10">
-                <span class="w-[10%] h-px bg-black"></span>
-                <span class="text-3xl lg:text-3xl font-medium text-black">Մեր մասին</span>
-                <span class="w-[10%] h-px bg-black"></span>
-            </div>
-
-            <div class="flex flex-col justify-center items-center sm:flex-col py-8 sm:px-[2em] md:px-4 lg:flex-row lg:px-[5em]">
-                <img src="./img/23.jpg" alt="" class="w-[20em] hidden lg:block">
-                <p class="px-[30px] py-[20px] text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                    aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa
-                    similique?Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Sit aliquid,
-                    in facilis minima debitis architecto voluptatem excepturi laborum
-                    labore quasi reiciendis nihil molestiae maiores rerum voluptatibus a consequuntur ipsa similique?
-                </p>
-                <img src="./img/23.jpg" alt="" class="w-[20em] lg:hidden">
-            </div>
-            <div class="w-full text-right px-10">
-                <a href="#home" class="fa fa-arrow-up fa-2x " aria-hidden="true "></a>
-            </div>
+            <a href="https://yandex.com/maps?utm_medium=mapframe&utm_source=maps"
+                style="color:#eee;font-size:12px;position:absolute;top:0px;"></a><a
+                href="https://yandex.com/maps/?ll=10.854186%2C49.182076&utm_medium=mapframe&utm_source=maps&z=4"
+                style="color:#eee;font-size:12px;position:absolute;top:14px;"></a><iframe
+                src="https://yandex.com/map-widget/v1/?ll=10.854186%2C49.182076&z=4" width="300" height="300"
+                frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+    </div>
 
 
-            <div class="w-full h-[15em]">
-                <div id="contact" class="flex items-center justify-center gap-4 py-10">
-                    <span class="w-[10%] h-px bg-black"></span>
-                    <span class="text-3xl lg:text-3xl font-medium text-black">Փնտրեք մեզ նաև</span>
-                    <span class="w-[10%] h-px bg-black"></span>
-                </div>
-                <h1 class="text-center text-[20px]">
-                    <i class="fa-solid fa-phone-volume"></i> +374 95 095 956
-                </h1>
-                <div class="py-4 flex justify-center space-x-6">
-
-                    <img src="./icons/instagram.png" class="w-9" alt="">
-                    <img src="./icons/tiktok.png" class="w-9" alt="">
-                    <img src="./icons/whatsapp.png" class="w-9" alt="">
-                    <img src="./icons/facebook.png" class="w-9" alt="">
-                </div>
-
-            </div>
 
 
-            <footer class="text-white text-center bg-black">
-                Copyright 2025
-            </footer>
+    <footer class="text-white text-center bg-black">
+        Copyright 2025
+    </footer>
 
 
 
 
 
-            <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
 
